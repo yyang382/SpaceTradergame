@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.ShipYardController">
+   <children>
+      <ImageView fitHeight="351.0" fitWidth="600.0">
+         <image>
+            <Image url="@2340Image/Start.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="219.0" layoutY="295.0">
+         <image>
+            <Image url="@2340Image/tableback/heartbeat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="219.0" layoutX="219.0" layoutY="295.0">
+         <image>
+            <Image url="@2340Image/tableback/heartbeat.png" />
+         </image>
+      </ImageView>
+      <ScrollPane opacity="0.7" prefHeight="168.0" prefWidth="400.0" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <TableView fx:id="shipTable" opacity="0.7" prefHeight="166.0" prefWidth="834.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="95.0" text="Ship Type">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/ship.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="priceColumn" prefWidth="57.0" text="Price">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="17.0">
+                           <image>
+                              <Image url="@2340Image/tableback/price.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="cargoColumn" prefWidth="113.0" text="Cargo Space">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/cargo.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="fuelColumn" minWidth="6.0" prefWidth="58.0" text="Fuel">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/fuel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="costColumn" prefWidth="93.0" text="Fuel Cost">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/fuelCost.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="strengthColumn" minWidth="0.0" prefWidth="114.0" text="Hull Strength">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/shield.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="weaponColumn" prefWidth="111.0" text="Weapon Slots">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0">
+                           <image>
+                              <Image url="@2340Image/tableback/weapon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="shieldColumn" prefWidth="104.0" text="Shield Slots">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/hull.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="gadgetColumn" minWidth="0.0" prefWidth="137.0" text="Gadget Slots">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@2340Image/tableback/gadge.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </content></ScrollPane>
+      <HBox layoutX="86.0" layoutY="180.0" prefWidth="290.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.5" AnchorPane.rightAnchor="192.5" AnchorPane.topAnchor="310.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#buttonHandler" opacity="0.7" prefHeight="20.0" prefWidth="79.0" text="Purchase" />
+            <Button mnemonicParsing="false" onAction="#buttonHandler1" opacity="0.7" prefWidth="90.0" text="Repair Hull" />
+            <Button mnemonicParsing="false" onAction="#buttonHandler2" opacity="0.7" prefWidth="90.0" text="Buy Fuel" />
+            <Button mnemonicParsing="false" onAction="#buttonHandler3" opacity="0.7" prefWidth="90.0" text="Return" />
+         </children>
+      </HBox>
+      <TableView fx:id="weaponTable" layoutY="168.0" opacity="0.7" prefHeight="127.0" prefWidth="219.0" AnchorPane.bottomAnchor="55.0" AnchorPane.topAnchor="168.0">
+        <columns>
+          <TableColumn fx:id="weaponName" prefWidth="79.0" text="Weapon">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@2340Image/tableback/weapon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+          <TableColumn fx:id="weaponDamage" prefWidth="79.0" text="Damage">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@2340Image/tableback/damage.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="weaponPrice" prefWidth="65.0" text="Price">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@2340Image/tableback/price.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+        </columns>
+      </TableView>
+      <TableView fx:id="shieldTable" layoutX="219.0" layoutY="168.0" opacity="0.7" prefHeight="128.0" prefWidth="219.0">
+        <columns>
+          <TableColumn fx:id="shieldName" prefWidth="69.0" text="Shield">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@2340Image/tableback/hull.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+          <TableColumn fx:id="shieldStrength" prefWidth="87.0" text="Strength">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@2340Image/tableback/shield.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="shieldPrice" prefWidth="69.0" text="Price">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@2340Image/tableback/price.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+        </columns>
+      </TableView>
+      <TableView fx:id="gadgetTable" layoutX="438.0" layoutY="168.0" opacity="0.7" prefHeight="182.0" prefWidth="162.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="168.0">
+        <columns>
+          <TableColumn fx:id="gadgetName" prefWidth="92.0" text="Gadget">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0">
+                     <image>
+                        <Image url="@2340Image/tableback/gadge.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+          <TableColumn fx:id="gadgetPrice" prefWidth="83.0" text="Price">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@2340Image/tableback/price.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="296.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.PlanetInformationController">
+   <children>
+      <ImageView fitHeight="296.0" fitWidth="280.0">
+         <image>
+            <Image url="@2340Image/planetBack.jpg" />
+         </image>
+      </ImageView>
+      <Canvas fx:id="canvas" height="160.0" layoutX="80.0" opacity="0.5" width="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="11.0" layoutY="7.0" text="Planet:" textFill="#e4e1e1" />
+      <Label fx:id="planetName" layoutX="15.0" layoutY="29.0" text="Label" textFill="#e4e1e1" />
+      <Label layoutX="10.0" layoutY="58.0" text="Solar System:" textFill="#e4e1e1" />
+      <Label fx:id="solarSystemName" layoutX="15.0" layoutY="88.0" text="Label" textFill="#e4e1e1" />
+      <Label fx:id="techLevel" layoutX="15.0" layoutY="174.0" text="Label" textFill="#e4e1e1" />
+      <Label fx:id="pirateLabel" layoutX="15.0" layoutY="209.0" text="Label" textFill="#e4e1e1" />
+      <Label fx:id="specialResource" layoutX="15.0" layoutY="224.0" text="Label" textFill="#e4e1e1" />
+      <Label fx:id="policeLabel" layoutX="134.0" layoutY="209.0" text="Label" textFill="#cdc2c2" />
+      <Label fx:id="disLabel" layoutX="15.0" layoutY="116.0" text="Label" textFill="#e8dddd" />
+      <Label fx:id="fuelLeftLabel" layoutX="15.0" layoutY="148.0" text="Label" textFill="#e8dddd" AnchorPane.bottomAnchor="135.0" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="234.0" layoutY="251.0">
+         <image>
+            <Image url="@2340Image/AllStar.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="234.0" layoutY="251.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="189.0" layoutY="251.0">
+         <image>
+            <Image url="@2340Image/wrap.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="189.0" layoutY="251.0" mnemonicParsing="false" onAction="#buttonHandler1" opacity="0.0" prefHeight="45.0" prefWidth="45.0" />
+   </children>
+</AnchorPane>

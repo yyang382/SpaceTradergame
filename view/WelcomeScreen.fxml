@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.WelcomeScreenController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@2340Image/trader.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="99.0" layoutX="501.0" layoutY="98.0">
+         <image>
+            <Image url="@2340Image/buttons/startGame.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="99.0" layoutX="501.0">
+         <image>
+            <Image url="@2340Image/buttons/loadGame.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="load" layoutX="501.0" mnemonicParsing="false" onAction="#buttonHandler1" opacity="0.39" prefHeight="98.0" prefWidth="99.0" textFill="#4520b5">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button layoutX="501.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.28" prefHeight="98.0" prefWidth="99.0" textFill="#419a48" AnchorPane.bottomAnchor="204.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Button>
+   </children>
+</AnchorPane>
